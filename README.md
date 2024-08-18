@@ -115,3 +115,34 @@ Create REST based WEB API for **Carting Service**.
 - Testability
 - Extensibility (via Versioning)
 - Self-Documented API. API documentation should be generated during the build. XML-Docs could be used for providing details of the endpoints.
+
+## Message Based Architecture. Message Broker
+
+ The goal of the course is to provide an overview of Message-Based Architecture and its key concept - Message Brokers (also called Message Oriented Middleware). Practical tasks include setting up one of the Message Broker tools and implementing Catalog and Carting services interaction using the selected message broker.
+
+### Task 1
+
+Choose and configure any message broker and setup it
+- Azure Service Bus
+- RabbitMQ
+- Kafka
+- Other
+
+### Task 2
+
+Create API for interaction with the chosen message broker.
+
+**Functional Requirements:**
+
+Implement the interaction between Catalog and Carting services via a message broker. When a user or external system changes the property’s value of any item in the catalog (e.g., name or price), it will be necessary to update this item in the basket.
+
+**Recommendations**
+
+- Choose any message broker
+- Create a client with listener and publisher parts
+- Call publisher from catalog service
+- Call listener from carting service
+
+**Non-functional Requirements (NRF):**
+
+The new integration solution should guarantee message delivery between two services. In the case of failure, the solution should include correct work with the delayed messages.
