@@ -177,3 +177,15 @@ Catalog service - secure create/update/delete endpoints to be accessible for Man
 Carting service – all endpoints should be accessible for both roles but add a custom middleware needs to be added to log an identity access token detail.
 
 Both services must be accessible via the same tokens.
+
+## Containerization and Orchestration
+
+The goal of this module is to make an overview of containerization and orchestration and best practices, create and run containers using Docker and provide overview about such concepts like orchestration and virtualization.
+
+### Task 1
+
+Based on previous modules, define all the external dependencies (as an example: message broker, SQL, or NoSQL database) and containerize them (use the pre-build container images). Catalog and Carting services should be reworked/reconfigured to work with the containerized versions of the dependencies.
+
+### Task 2
+
+Create a docker-compose file for all the services (Catalog and Carting) and external dependencies from Task1. Build, run, and test the compose file.
