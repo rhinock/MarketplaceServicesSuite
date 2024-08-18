@@ -147,7 +147,7 @@ Implement the interaction between Catalog and Carting services via a message bro
 
 The new integration solution should guarantee message delivery between two services. In the case of failure, the solution should include correct work with the delayed messages.
 
-### Security. Authentication & Authorization
+## Security. Authentication & Authorization
 
 Authentication and authorization are essential aspects of any modern application/ service or subsystem. In this module we will review different auth options and protocols as well as advanced concepts like SSO and MFA (Multi Factor Authentication). The practical part includes setup and configuration of your IAM (Identity and Access Management) server and role-based authentication implementation for your Catalog service.
 
