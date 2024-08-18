@@ -65,7 +65,7 @@ Create BLL (business logic layer) and DAL (data-access layer) for **Catalog Serv
 
 ## RESTful Web API
 
- The goal of this module is to provide an overview of REST architecture style and its advanced topics like documentation and versioning. Practical task includes implementation of the APIs for both Catalog and Carting services.
+The goal of this module is to provide an overview of REST architecture style and its advanced topics like documentation and versioning. Practical task includes implementation of the APIs for both Catalog and Carting services.
 
 ### Task 1
 
@@ -118,7 +118,7 @@ Create REST based WEB API for **Carting Service**.
 
 ## Message Based Architecture. Message Broker
 
- The goal of the course is to provide an overview of Message-Based Architecture and its key concept - Message Brokers (also called Message Oriented Middleware). Practical tasks include setting up one of the Message Broker tools and implementing Catalog and Carting services interaction using the selected message broker.
+The goal of the course is to provide an overview of Message-Based Architecture and its key concept - Message Brokers (also called Message Oriented Middleware). Practical tasks include setting up one of the Message Broker tools and implementing Catalog and Carting services interaction using the selected message broker.
 
 ### Task 1
 
@@ -146,3 +146,34 @@ Implement the interaction between Catalog and Carting services via a message bro
 **Non-functional Requirements (NRF):**
 
 The new integration solution should guarantee message delivery between two services. In the case of failure, the solution should include correct work with the delayed messages.
+
+### Security. Authentication & Authorization
+
+Authentication and authorization are essential aspects of any modern application/ service or subsystem. In this module we will review different auth options and protocols as well as advanced concepts like SSO and MFA (Multi Factor Authentication). The practical part includes setup and configuration of your IAM (Identity and Access Management) server and role-based authentication implementation for your Catalog service.
+
+You need to implement role-based security for your Catalog service endpoints using JWT tokens.
+
+### Task 1
+
+Setup identity management system. Identity Management System should have the following functionality:
+- Predefined roles: Manager, Buyer 
+- Predefined permissions:  
+  - Buyer: Read 
+  - Manager: Read, Create, Update, Delete 
+- Generate Identity token 
+- Check/verify Identity token 
+- Implement Refresh token 
+
+Note! You may use some cloud-based IMS (Identity Management Services) or look for existing free solutions like:
+- https://github.com/DuendeSoftware/IdentityServer 
+- https://github.com/IdentityServer/IdentityServer4  
+- https://www.keycloak.org/ 
+
+ 
+### Task 2
+
+Catalog service - secure create/update/delete endpoints to be accessible for Manager role only. All Read (get) endpoints should not have any access limitations for the Manager role.
+
+Carting service – all endpoints should be accessible for both roles but add a custom middleware needs to be added to log an identity access token detail.
+
+Both services must be accessible via the same tokens.
