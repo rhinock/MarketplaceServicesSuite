@@ -168,7 +168,6 @@ Note! You may use some cloud-based IMS (Identity Management Services) or look fo
 - https://github.com/DuendeSoftware/IdentityServer 
 - https://github.com/IdentityServer/IdentityServer4  
 - https://www.keycloak.org/ 
-
  
 ### Task 2
 
